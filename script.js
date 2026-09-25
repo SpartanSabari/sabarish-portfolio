@@ -11,7 +11,7 @@ function render() {
   $("heroRole").textContent = PORTFOLIO.role;
   $("heroSubtitle").textContent = PORTFOLIO.heroSubtitle;
   $("heroLocation").textContent = PORTFOLIO.location;
-  $("heroExperience").textContent = PORTFOLIO.experience;
+  $("heroExperience").textContent = PORTFOLIO.experienceYears;
   $("summary").textContent = PORTFOLIO.summary;
   $("factExp").textContent = PORTFOLIO.experience;
 
