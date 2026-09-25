@@ -133,3 +133,46 @@ window.addEventListener("scroll", () => {
   const progress = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
   $("progress").style.width = `${progress}%`;
 });
+
+// Professional profile-card image carousel.
+// Images are intentionally shuffled every 3 seconds without repeating
+// the image currently on screen.
+const profileImages = [
+  "profile-1.jpg",
+  "profile-2.jpg",
+  "profile-3.jpg",
+  "profile-4.jpg"
+];
+
+const profileCarousel = $("profileCarousel");
+
+if (profileCarousel && profileImages.length > 1) {
+  // Preload all images for smooth transitions on mobile.
+  profileImages.forEach(src => {
+    const image = new Image();
+    image.src = src;
+  });
+
+  let currentImage = 0;
+
+  setInterval(() => {
+    let nextImage;
+    do {
+      nextImage = Math.floor(Math.random() * profileImages.length);
+    } while (nextImage === currentImage);
+
+    currentImage = nextImage;
+    profileCarousel.classList.add("profile-changing");
+
+    // Change after the first part of the fade-out.
+    setTimeout(() => {
+      profileCarousel.src = profileImages[currentImage];
+      profileCarousel.alt = `Developer workspace concept ${currentImage + 1}`;
+    }, 250);
+
+    // Bring the new image back in.
+    setTimeout(() => {
+      profileCarousel.classList.remove("profile-changing");
+    }, 700);
+  }, 3000);
+}

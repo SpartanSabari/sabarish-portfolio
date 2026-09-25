@@ -186,3 +186,36 @@ body::before {
   body::before { background-size: 30px 30px; }
   .hero-photo::before { right: 0; bottom: -10px; font-size: 5rem; }
 }
+
+
+/* 4-image professional profile card carousel */
+.photo-frame {
+  overflow: hidden;
+}
+.photo-frame img {
+  transition: opacity .45s ease, transform .65s cubic-bezier(.2,.8,.2,1), filter .45s ease;
+  will-change: opacity, transform;
+}
+.photo-frame img.profile-changing {
+  opacity: 0;
+  transform: scale(1.035) rotate(-1deg);
+  filter: blur(3px);
+}
+.photo-frame::after {
+  content: "AUTO • 3 SEC";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 9px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  background: rgba(8,10,13,.72);
+  color: rgba(255,255,255,.72);
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  backdrop-filter: blur(10px);
+}
+@media (max-width: 700px) {
+  .photo-frame::after { top: 15px; right: 15px; }
+}
