@@ -14,7 +14,7 @@ const PORTFOLIO = {
 
   contact: {
     // Replace the email below with the email you want displayed publicly.
-    email: "[YOUR EMAIL]",
+    email: "office.sabarish27@gmail.com",
     github: "https://github.com/SpartanSabari",
     linkedin: "https://www.linkedin.com/in/sabarish-n-843a34226/",
     location: "Chennai, India"
@@ -43,7 +43,6 @@ const PORTFOLIO = {
     {
       company: "Tech Mahindra",
       role: "Software Engineer",
-      band: "U2",
       location: "Chennai",
       period: "Current",
       technologies: [
@@ -193,16 +192,16 @@ const PORTFOLIO = {
     {
       qualification: "Diploma in Mechanical Engineering",
       institution: "Government Polytechnic College, Trichy",
-      year: "",
+      year: "2018",
       score: "66%"
     },
     {
       qualification: "SSLC",
-      institution: "",
-      year: "",
+      institution: "2015",
+      year: "Arunodhaya Higher Secondary School, Pattukkottai",
       score: "92%"
     }
   ],
 
-  certification: null
+  certification: "Full Stack Development in ReactJS"
 };
