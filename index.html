@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0d12" />
+  <meta name="description" content="Sabarish N — Java Backend & Full-Stack Developer specializing in Java, Spring Boot, REST APIs, JPA/Hibernate, SQL and Angular." />
+  <meta property="og:title" content="Sabarish N | Java Backend & Full-Stack Developer" />
+  <meta property="og:description" content="Software Engineer specializing in Java, Spring Boot, REST APIs, databases, Angular and business application development." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="profile.jpg" />
+  <title>Sabarish N | Java Backend & Full-Stack Developer</title>
+  <link rel="icon" href="profile.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a class="brand" href="#home" aria-label="Sabarish N home">SN<span>.</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☼</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse"></span><span id="heroRole"></span></div>
+        <h1>Building reliable <span>business software</span> with Java.</h1>
+        <p id="heroSubtitle"></p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View Projects <span>↗</span></a>
+          <a class="btn secondary" href="#contact">Contact Me</a>
+          <a class="icon-btn" id="githubBtn" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="icon-btn" id="linkedinBtn" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+        <div class="hero-meta">
+          <span>📍 <span id="heroLocation"></span></span>
+          <span>•</span>
+          <span id="heroExperience"></span>
+        </div>
+      </div>
+
+      <div class="hero-photo reveal">
+        <div class="photo-frame">
+          <img src="profile.jpg" alt="Sabarish N" />
+          <div class="photo-tag">Java • Spring Boot • APIs</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-head reveal">
+        <span class="section-number">01</span>
+        <div>
+          <p class="kicker">About me</p>
+          <h2>Professional summary</h2>
+        </div>
+      </div>
+      <div class="about-grid">
+        <p class="lead reveal" id="summary"></p>
+        <div class="fact-card reveal">
+          <div><strong id="factExp"></strong><span>Experience</span></div>
+          <div><strong>Java 21</strong><span>Primary backend</span></div>
+          <div><strong>Spring Boot</strong><span>API development</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="skills">
+      <div class="section-head reveal">
+        <span class="section-number">02</span>
+        <div>
+          <p class="kicker">Toolbox</p>
+          <h2>Technical skills</h2>
+        </div>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <section class="section container" id="experience">
+      <div class="section-head reveal">
+        <span class="section-number">03</span>
+        <div>
+          <p class="kicker">Career</p>
+          <h2>Experience</h2>
+        </div>
+      </div>
+      <div id="experienceList"></div>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-head reveal">
+        <span class="section-number">04</span>
+        <div>
+          <p class="kicker">Selected work</p>
+          <h2>Projects & business applications</h2>
+        </div>
+      </div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <section class="section container architecture" id="architecture">
+      <div class="section-head reveal">
+        <span class="section-number">05</span>
+        <div>
+          <p class="kicker">Technical expertise</p>
+          <h2>How I build APIs</h2>
+        </div>
+      </div>
+      <div class="architecture-card reveal">
+        <div class="arch-node">Angular / Client</div>
+        <span class="arrow">→</span>
+        <div class="arch-node">REST API</div>
+        <span class="arrow">→</span>
+        <div class="arch-node">Controller</div>
+        <span class="arrow">→</span>
+        <div class="arch-node">Service</div>
+        <span class="arrow">→</span>
+        <div class="arch-node">Repository</div>
+        <span class="arrow">→</span>
+        <div class="arch-node">JPA / Hibernate</div>
+        <span class="arrow">→</span>
+        <div class="arch-node">Database</div>
+      </div>
+      <p class="architecture-note reveal">A layered approach keeps API contracts, business logic and persistence responsibilities clearly separated.</p>
+    </section>
+
+    <section class="section container planned" id="planned">
+      <div class="planned-banner reveal">
+        <div>
+          <span class="status">PLANNED / UPCOMING</span>
+          <h2 id="plannedName"></h2>
+          <p id="plannedDescription"></p>
+        </div>
+        <div class="planned-stack" id="plannedStack"></div>
+      </div>
+      <div class="concept-grid" id="plannedConcepts"></div>
+    </section>
+
+    <section class="section container" id="education">
+      <div class="section-head reveal">
+        <span class="section-number">06</span>
+        <div>
+          <p class="kicker">Education</p>
+          <h2>Academic background</h2>
+        </div>
+      </div>
+      <div class="education-grid" id="educationGrid"></div>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="contact-card reveal">
+        <div>
+          <p class="kicker">Let's connect</p>
+          <h2>Have a Java backend opportunity?</h2>
+          <p>I'm open to conversations about Java Backend and Java Full-Stack opportunities.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn primary" id="emailBtn">Email Me ↗</a>
+          <a class="btn secondary" id="contactGithub" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="btn secondary" id="contactLinkedin" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+        <div class="contact-line">
+          <span id="contactEmail"></span>
+          <span>•</span>
+          <span id="contactLocation"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <span>© <span id="year"></span> Sabarish N</span>
+    <span>Java Backend & Full-Stack Developer</span>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
