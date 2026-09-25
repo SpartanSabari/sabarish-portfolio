@@ -4,8 +4,7 @@ const PORTFOLIO = {
   role: "Software Engineer",
   heroTitle: "Java Backend & Full-Stack Developer",
   location: "Chennai, India",
-  experience: "3+ years in software development",
-
+  experienceYears: "3+ years in software development",
   heroSubtitle:
     "Software Engineer specializing in Java, Spring Boot, REST APIs, databases, Angular and business application development.",
 
